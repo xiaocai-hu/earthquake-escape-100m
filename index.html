@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, initial-scale=1.0">
+  <title>地震避险与应急逃生互动科普</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="scanline"></div>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">EQ</span>
+      <div>
+        <strong>地震避险与应急逃生</strong>
+        <span>中小学生互动科普训练系统</span>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#knowledge">知识科普</a>
+      <a href="#escape">逃生流程</a>
+      <a href="#quiz">知识问答</a>
+      <a href="#leaderboard">排行榜</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero-grid">
+      <div class="hero-copy panel">
+        <div class="status-pill">
+          <span class="pulse-dot"></span>
+          校园安全应急学习模式已开启
+        </div>
+        <h1>遇到地震，冷静判断，科学避险</h1>
+        <p>
+          通过科技风知识卡片、场景演示和随机问答训练，帮助同学们记住地震发生时的关键动作：
+          <strong>先避险、护头颈、听指挥、有序撤离。</strong>
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#quiz">开始知识问答</a>
+          <a class="ghost-btn" href="#knowledge">查看避险知识</a>
+        </div>
+        <div class="quick-stats">
+          <div>
+            <span>100</span>
+            <small>题库随机抽题</small>
+          </div>
+          <div>
+            <span>2</span>
+            <small>训练模式</small>
+          </div>
+          <div>
+            <span>10</span>
+            <small>本机排行记录</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="command-panel panel" aria-label="地震应急避险疏散演练视频">
+        <div class="screen-head">
+          <span>EARTHQUAKE DRILL VIDEO</span>
+          <button id="drillStartBtn" class="risk-badge" type="button">启动模拟演练</button>
+        </div>
+        <div class="hero-video-frame">
+          <video class="hero-video" controls preload="metadata" playsinline>
+            <source src="./地震：中小学校地震应急避险疏散演练指导视频.mp4" type="video/mp4">
+            当前浏览器无法播放该视频。
+          </video>
+        </div>
+        <div class="drill-console" aria-live="polite">
+          <div class="drill-status">
+            <span id="drillStage">待启动</span>
+            <strong id="drillAction">点击“启动模拟演练”，观察地震应急处置流程。</strong>
+          </div>
+          <div class="drill-progress">
+            <span id="drillProgressBar"></span>
+          </div>
+          <div class="drill-steps">
+            <span data-step="0">震动预警</span>
+            <span data-step="1">桌下避险</span>
+            <span data-step="2">主震停止</span>
+            <span data-step="3">有序撤离</span>
+            <span data-step="4">操场集合</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="knowledge">
+      <div class="section-title">
+        <span>01</span>
+        <div>
+          <h2>地震避险知识科普</h2>
+          <p>按场景记忆，每个场景只抓住最重要的动作。</p>
+        </div>
+      </div>
+
+      <div class="knowledge-grid">
+        <article class="info-card">
+          <div class="card-visual">
+            <img src="./1.webp" alt="地震预警信号">
+          </div>
+          <h3>识别地震信号</h3>
+          <p>强烈摇晃、桌椅移动、物品掉落或听到警报时，要立即进入避险状态。</p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-visual">
+            <img src="./2.webp" alt="室内桌下避险">
+          </div>
+          <h3>室内避险</h3>
+          <p>迅速躲到结实桌子下，护住头颈，抓住桌腿，远离玻璃、高柜和吊灯。</p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-visual">
+            <img src="./3.webp" alt="学校有序撤离">
+          </div>
+          <h3>学校逃生</h3>
+          <p>先听老师指挥，躲避摇晃；摇晃停止后护头排队走楼梯，不推挤。</p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-visual">
+            <img src="./4.webp" alt="户外空旷避险">
+          </div>
+          <h3>户外避险</h3>
+          <p>远离楼房、围墙、电线杆、广告牌和山坡，跑向开阔安全区域。</p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-visual">
+            <img src="./5.webp" alt="震后注意">
+          </div>
+          <h3>震后注意</h3>
+          <p>可能还有余震，不乘电梯，不返回危险建筑，听从广播和老师安排。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block escape-block" id="escape">
+      <div class="section-title">
+        <span>02</span>
+        <div>
+          <h2>应急逃生流程</h2>
+          <p>把地震应对拆成 5 个清晰步骤，遇险时照着做。</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <b>1</b>
+          <div class="timeline-visual">
+            <img src="./6.webp" alt="就近避险">
+          </div>
+          <h3>就近避险</h3>
+          <p>摇晃时先躲避，不急着跑，保护头颈。</p>
+        </div>
+        <div class="timeline-step">
+          <b>2</b>
+          <div class="timeline-visual">
+            <img src="./7.webp" alt="远离危险物">
+          </div>
+          <h3>远离危险物</h3>
+          <p>避开窗户、书柜、吊灯、外墙和玻璃。</p>
+        </div>
+        <div class="timeline-step">
+          <b>3</b>
+          <div class="timeline-visual">
+            <img src="./8.webp" alt="听从指挥">
+          </div>
+          <h3>听从指挥</h3>
+          <p>听老师、家长和工作人员指令行动。</p>
+        </div>
+        <div class="timeline-step">
+          <b>4</b>
+          <div class="timeline-visual">
+            <img src="./9.webp" alt="有序撤离">
+          </div>
+          <h3>有序撤离</h3>
+          <p>摇晃停止后走楼梯，不奔跑、不推挤。</p>
+        </div>
+        <div class="timeline-step">
+          <b>5</b>
+          <div class="timeline-visual">
+            <img src="./10.webp" alt="集合等待">
+          </div>
+          <h3>集合等待</h3>
+          <p>到空旷地集合，等待确认安全。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block quiz-section" id="quiz">
+      <div class="section-title">
+        <span>03</span>
+        <div>
+          <h2>随机知识问答训练</h2>
+          <p>选择倒计时或固定题数，系统会从题库随机抽题并记录本机排行。</p>
+        </div>
+      </div>
+
+      <div class="quiz-layout">
+        <aside class="quiz-control panel">
+          <h3>训练设置</h3>
+          <label class="field-label" for="playerName">昵称</label>
+          <input id="playerName" class="text-input" type="text" maxlength="12" placeholder="输入你的昵称">
+
+          <div class="mode-tabs" role="radiogroup" aria-label="问答模式">
+            <label>
+              <input type="radio" name="quizMode" value="timer" checked>
+              <span>倒计时模式</span>
+            </label>
+            <label>
+              <input type="radio" name="quizMode" value="count">
+              <span>固定题数模式</span>
+            </label>
+          </div>
+
+          <div class="setting-row">
+            <label for="timerSelect">倒计时</label>
+            <select id="timerSelect">
+              <option value="60" selected>60 秒</option>
+              <option value="90">90 秒</option>
+              <option value="120">120 秒</option>
+            </select>
+          </div>
+
+          <div class="setting-row">
+            <label for="countSelect">固定题数</label>
+            <select id="countSelect">
+              <option value="10" selected>10 题</option>
+              <option value="15">15 题</option>
+              <option value="20">20 题</option>
+            </select>
+          </div>
+
+          <button id="startBtn" class="primary-btn full" type="button">启动训练</button>
+          <button id="restartBtn" class="ghost-btn full" type="button">重置当前训练</button>
+
+          <div class="hud-grid">
+            <div>
+              <span id="scoreValue">0</span>
+              <small>分数</small>
+            </div>
+            <div>
+              <span id="correctValue">0</span>
+              <small>答对</small>
+            </div>
+            <div>
+              <span id="progressValue">0/0</span>
+              <small>进度</small>
+            </div>
+            <div>
+              <span id="timeValue">00:00</span>
+              <small id="timeLabel">剩余</small>
+            </div>
+          </div>
+        </aside>
+
+        <article class="question-panel panel">
+          <div class="question-top">
+            <span id="categoryBadge">待启动</span>
+            <span id="modeBadge">倒计时 60 秒</span>
+          </div>
+          <div id="countdownPanel" class="countdown-panel">
+            <div class="countdown-head">
+              <span id="countdownTitle">倒计时准备</span>
+              <strong id="countdownValue">01:00</strong>
+            </div>
+            <div class="countdown-track">
+              <span id="countdownBar"></span>
+            </div>
+          </div>
+          <h3 id="questionText">点击“启动训练”，开始随机知识问答。</h3>
+          <div id="answerList" class="answer-list"></div>
+          <div id="feedbackBox" class="feedback-box">训练开始后，每题作答会立即显示解析。</div>
+          <div class="question-actions">
+            <button id="nextBtn" class="primary-btn" type="button" disabled>下一题</button>
+            <button id="finishBtn" class="ghost-btn" type="button" disabled>结束并保存排名</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block leaderboard-section" id="leaderboard">
+      <div class="section-title">
+        <span>04</span>
+        <div>
+          <h2>本机排行榜</h2>
+          <p>记录本机前 10 名，按分数、正确率、用时排序。</p>
+        </div>
+      </div>
+      <div class="leaderboard panel">
+        <div class="leaderboard-head">
+          <strong>TOP 10 SAFETY RANKING</strong>
+          <button id="clearRankBtn" class="danger-btn" type="button">清空排行榜</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>排名</th>
+              <th>昵称</th>
+              <th>模式</th>
+              <th>分数</th>
+              <th>正确率</th>
+              <th>用时</th>
+              <th>日期</th>
+            </tr>
+          </thead>
+          <tbody id="rankBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    安全口诀：先避险、护头颈、听指挥、有序撤离、防余震。
+  </footer>
+
+  <button id="rocketTopBtn" class="rocket-top-btn" type="button" aria-label="返回顶部">
+    <span>🚀</span>
+  </button>
+
+  <script src="./app.js"></script>
+</body>
+</html>
